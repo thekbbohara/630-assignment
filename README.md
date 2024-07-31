@@ -1,2 +1,2 @@
 # mern-class assignment repo
-[question repo ->](https://github.com/kaylinkhanal/630assignment)
+[question repo](https://github.com/kaylinkhanal/630assignment)
