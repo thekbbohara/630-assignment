@@ -5,3 +5,10 @@ const arr = [3,4,5]
 
 //? Answer
 console.log(arr.length)
+
+//! Q2 
+//reverse the array
+//expected output is [5,4,3]% 
+
+//? Answer
+console.log("reversed array ->", arr.reverse())
