@@ -24,7 +24,17 @@ console.log({ total });
 // Q3
 // count total char
 let totalChar = 0;
-arr.forEach(str=>{totalChar += str.length})
+arr.forEach((str) => {
+  totalChar += str.length;
+});
 
-console.log(totalChar)
+console.log(totalChar);
 
+const cartItems=[
+{id: 1, product:"hawkins", price:30, quantity:1},
+{id: 1, product:"baltra", price:10, quantity:3},
+]
+
+//60
+const totalPrice = cartItems.reduce((total,curr)=>total+=curr.price * curr.quantity,0)
+console.log(totalPrice)
