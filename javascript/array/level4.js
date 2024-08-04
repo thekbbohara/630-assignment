@@ -20,3 +20,11 @@ arr.forEach((item) => {
   }
 });
 console.log({ total });
+
+// Q3
+// count total char
+let totalChar = 0;
+arr.forEach(str=>{totalChar += str.length})
+
+console.log(totalChar)
+
