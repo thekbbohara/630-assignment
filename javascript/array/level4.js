@@ -30,11 +30,22 @@ arr.forEach((str) => {
 
 console.log(totalChar);
 
-const cartItems=[
-{id: 1, product:"hawkins", price:30, quantity:1},
-{id: 1, product:"baltra", price:10, quantity:3},
-]
+// Q4
+const cartItems = [
+  { id: 1, product: "hawkins", price: 30, quantity: 1 },
+  { id: 1, product: "baltra", price: 10, quantity: 3 },
+];
 
 //60
-const totalPrice = cartItems.reduce((total,curr)=>total+=curr.price * curr.quantity,0)
-console.log(totalPrice)
+const totalPrice = cartItems.reduce(
+  (total, curr) => (total += curr.price * curr.quantity),
+  0,
+);
+console.log(totalPrice);
+
+// Q4.1
+// using map ['m','m','i']
+const lastChar = arr
+  .map((str) => str[str.length - 1])
+  .filter((item, id,arr) => arr.indexOf(item) === id);
+console.log(lastChar);
