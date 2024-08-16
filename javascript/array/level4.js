@@ -1,4 +1,4 @@
-const arr = ["ram", "shyam", "hari"];
+const arr = ["ran", "shyam", "hari", "sshivam"];
 
 //Q1
 //remove shyam
@@ -47,5 +47,7 @@ console.log(totalPrice);
 // using map ['m','m','i']
 const lastChar = arr
   .map((str) => str[str.length - 1])
-  .filter((item, id,arr) => arr.indexOf(item) === id);
+  .filter((item, id, arr) => arr.indexOf(item) === id);
 console.log(lastChar);
+
+

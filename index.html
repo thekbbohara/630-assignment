@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+    debugger
+      var compose = function (functions) {
+        return function (x) {
+          let result = x;
+          for (let i = functions.length - 1; i <= 0; i--) {
+            result = functions[i](result);
+          }
+          return result;
+        };
+      };
+
+      const fnc = compose([(x) => x + 1, (x) => 2 * x]);
+      fnc(4); // 9
+    </script>
+  </body>
+</html>

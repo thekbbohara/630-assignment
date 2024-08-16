@@ -2,7 +2,7 @@ const arr = [3,4,5]
 //! Q1
 // find the length of the arr
 // expected output
-
+var arrb = [...arr]
 //? Answer
 console.log(arr.length)
 
@@ -12,3 +12,6 @@ console.log(arr.length)
 
 //? Answer
 console.log("reversed array ->", arr.reverse())
+
+//! Q3
+// 
