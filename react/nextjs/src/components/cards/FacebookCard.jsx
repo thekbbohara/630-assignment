@@ -128,7 +128,7 @@ const FacebookCard = () => {
                 setIsMouseOnLike(false);
                 setIsLikeClicked(false);
               }}
-              className="flex gap-1 hover:bg-[#cdd6f440] rounded-md px-3 py-1"
+              className="select-none flex gap-1 hover:bg-[#cdd6f440] rounded-md px-3 py-1"
             >
               {reaction ? (
                 <>
