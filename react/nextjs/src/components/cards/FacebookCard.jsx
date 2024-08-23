@@ -132,22 +132,14 @@ const FacebookCard = () => {
             >
               {reaction ? (
                 <>
-                  <Image
-                    src={reaction.src}
-                    alt={reaction.type}
-                    height={40}
-                    width={40}
-                    className="object-cover w-6 h-6"
-                  />
+                  <Image src={reaction.src} alt={reaction.type} height={40} width={40} className="object-cover w-6 h-6" />
                   {reaction.type}
                 </>
               ) : (
-                <>
-                  <IconThumbUp /> Like
-                </>
+                <><IconThumbUp /> Like</>
               )}
             </div>
-            {isHover && (
+            {isHover && ( 
               <div
                 onMouseEnter={() => {
                   setIsReacting(true);
