@@ -85,7 +85,7 @@ const CalculatorClient = () => {
       const lastVal = tempQuery[tempQuery.length - 1];
       if (isNaN(lastVal) || lastVal == ".") {
         tempQuery.pop();
-        setQuery(tempQuery + input);
+        setQuery(tempQuery.join("") + input);
         return;
       }
     }
