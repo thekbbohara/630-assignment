@@ -12,6 +12,7 @@ const CalculatorClient = () => {
 
   const evalQuery = (input) => {
     if (isEqualToMode) {
+      if (input == "=") return;
       setHistory([...history, { query: query, result: result }]);
       if (queryRef.current) {
         queryRef.current.style.opacity = 1;
@@ -33,6 +34,9 @@ const CalculatorClient = () => {
         input == "%" ||
         input == "."
       ) {
+        /* if (input == ".") {
+          if (query.includes(".")) return;
+        } */
         setQuery(result + input);
       }
       setIsEqualToMode(false);
@@ -81,6 +85,9 @@ const CalculatorClient = () => {
       input == "%" ||
       input == "."
     ) {
+      if (input == ".") {
+        if (query.includes(".")) return;
+      }
       const tempQuery = query.split("");
       const lastVal = tempQuery[tempQuery.length - 1];
       if (isNaN(lastVal) || lastVal == ".") {
