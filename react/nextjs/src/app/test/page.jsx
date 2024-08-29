@@ -1,25 +1,27 @@
 "use client";
+import { changeShape, getArea } from "@/redux/slices/box";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "@/redux/counter";
 
 export default function Counter() {
-  const count = useSelector((state) => state.counter.value);
+  const { area, width, height, radius } = useSelector((state) => state.box);
   const dispatch = useDispatch();
 
   return (
     <div>
+      <div
+        style={{ width, height, backgroundColor: "red", borderRadius: radius }}
+      ></div>
+      <span className="text-white">
+        area: {(area * 0.0264583333).toFixed(2)}cm<sup>2</sup>
+      </span>
+      <br />
       <button
-        aria-label="Increment value"
-        onClick={() => dispatch(increment())}
+        onClick={() => {
+          dispatch(changeShape());
+          dispatch(getArea());
+        }}
       >
-        Increment
-      </button>
-      <span>{count}</span>
-      <button
-        aria-label="Decrement value"
-        onClick={() => dispatch(decrement())}
-      >
-        Decrement
+        dont click
       </button>
     </div>
   );
